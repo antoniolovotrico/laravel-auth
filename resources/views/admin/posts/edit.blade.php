@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Edit {{ $post -> title }}</h1>
-        <form class="form_container" action="{{ route('admin.posts.update', ['post'=> $post-> id])}}" method="post">
+        <form class="form_container" action="{{ route('admin.posts.update', ['post'=> $post-> slug])}}" method="post">
             @csrf
             @method('Put')
             <div class="draw_container">
