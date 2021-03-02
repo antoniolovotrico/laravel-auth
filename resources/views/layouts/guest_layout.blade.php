@@ -38,6 +38,9 @@
                             <a class="nav-link" href="{{ route($item['name']) }}" class="{{ Route::currentRouteName() === $item['name'] ? 'active' : '' }}">{{ $item['name'] }}</a>
                         </li>
                         @endforeach
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('posts.index') }}" class="{{ Route::currentRouteName() === 'posts.index' ? 'active' : '' }}">Blog</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -63,6 +66,10 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('admin.index') }}">
+                                        Admin
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

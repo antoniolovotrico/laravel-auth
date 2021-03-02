@@ -42,7 +42,8 @@ class PostController extends Controller
     {
         $validated_data = $request->validate([
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'slug' => 'required'
         ]);
 
         Post::create($validated_data);

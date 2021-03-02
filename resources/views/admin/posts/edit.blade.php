@@ -17,8 +17,8 @@
                     <div class="error_field_required">{{ $message }}</div>
                 @enderror
             </div>
-            <div>
+            <aside>
                 <button id="create_btn" type="submit">Edit</button>
-            </div>
+            </aside>
         </form>
 @endsection

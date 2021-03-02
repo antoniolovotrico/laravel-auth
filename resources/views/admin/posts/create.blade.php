@@ -12,6 +12,11 @@
         @enderror
         <label for="author">Author</label>
         <input id="input_author" type="text" name="author" placeholder="Write here the author of your post">
+        <label for="slug">Slug</label>
+        <input id="input_title" type="text" name="slug" placeholder="Write here the title of your post divided by - "">
+        @error('title')
+        <div class="error_field_required">{{ $message }}</div>
+        @enderror
         <label for="body">Body</label>
         <textarea cols="30" rows="10" id="input_body" type="text" name="body" placeholder="Write here the body of your post"></textarea>
         @error('body')

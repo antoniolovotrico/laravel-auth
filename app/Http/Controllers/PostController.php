@@ -14,9 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
+        $menu_link = config('nav_menu_links');
         $posts = Post::latest()->get();
 
-        return view('admin.posts.index',compact('posts'));
+        return view('guest.posts.index',compact('posts','menu_link'));
     }
 
     /**
